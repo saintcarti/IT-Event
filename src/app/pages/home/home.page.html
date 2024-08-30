@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Eventos Disponibles</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"
+      mode="ios"
+      text=""
+      color="dark"></ion-back-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu() ">
+        <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <ion-tabs >
+    <ion-tab-bar slot="bottom">
+      <ion-tab-button tab="events">
+        <ion-icon name="today-outline"></ion-icon>
+        <ion-label>Eventos</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="home">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label>Inicio</ion-label>
+      </ion-tab-button>
+      <ion-tab-button tab="admin">
+        <ion-icon name="reader-outline"></ion-icon>
+        <ion-label>Administración</ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+</ion-content>
+
