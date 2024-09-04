@@ -1,12 +1,10 @@
 import { Component } from '@angular/core';
 
-interface Opciones{
+interface Options{
   icon: string;
   name: string;
   redirectTo: string;
 }
-
-
 
 @Component({
   selector: 'app-root',
@@ -16,22 +14,31 @@ interface Opciones{
 export class AppComponent {
   constructor() {}
 
-  opciones : Opciones[]=[
-    {
-      icon: 'person-circle-outline',
-      name: 'Perfil',
-      redirectTo: '/profile'
-    },
-    {
-      icon: 'people-outline',
-      name: 'Usuarios',
-      redirectTo: '/users'
-    },
-    {
-      icon: 'log-out-outline',
-      name: 'Cerrar Sesión',
-      redirectTo: '/login'
-    }
-  ]
-
+  options: Options[] = [
+  {
+    icon: 'person-circle-outline',
+    name: 'Perfil',
+    redirectTo: '/user'
+  },
+  {
+    icon: 'people-outline',
+    name: 'Usuarios',
+    redirectTo: '/users'
+  },
+  {
+    icon: 'calendar-outline',
+    name: 'Eventos',
+    redirectTo: '/events'
+  },
+  {
+    icon: 'settings-outline',
+    name: 'Configuración',
+    redirectTo: '/config'
+  },
+  {
+    icon: 'log-out-outline',
+    name: 'Cerrar Sesión',
+    redirectTo: '/login'
+  }
+  ];
 }

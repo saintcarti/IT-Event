@@ -1,41 +1,40 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Bienvenido A IT-Event</ion-title>
+    <ion-title>Registro de usuario</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"
-      mode="ios"
-      text=""
-      color="dark"></ion-back-button>
+      <ion-back-button defaultHref="/" mode="ios" text="" color="dark" ></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card mode="ios" id="i-card">
-    <ion-card-header id="i-header">
+  <ion-card mode="ios" id="i-card" style="padding-bottom: 15px;">
+    <ion-card-header>
       <ion-card-title>Registro de usuario</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <ion-list id="i-list" lines="none">
+      <ion-list lines="none">
         <ion-item>
-          <ion-input type="text" name="txtNombre" labelPlacement="stacked" label="Usuario: " placeholder="Ingrese su usuario..."></ion-input>
+          <ion-input name="txtNombre" label="Nombre completo: " type="text" labelPlacement="stacked" placeholder="Ingrese su nombre..."></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="email" name="txtCorreo" labelPlacement="stacked" label="Correo: " placeholder="Ingrese su correo..."></ion-input>
+          <ion-input name="txtEmail" label="Correo electronico: " type="email" labelPlacement="stacked" placeholder="Ingrese su correo electronico..."></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" name="txtContraseña" labelPlacement="stacked" label="Contraseña: " placeholder="Ingrese su contraseña..."></ion-input>
+          <ion-input name="txtUsuario" label="Usuario: " type="text" labelPlacement="stacked" placeholder="Ingrese su usuario..."></ion-input>
         </ion-item>
         <ion-item>
-          <ion-input type="password" name="txtConfirmar" labelPlacement="stacked" label="Confirmar contraseña: " placeholder="Confirme su contraseña..."></ion-input>
+          <ion-input name="txtPassword" label="Contraseña: " type="password" labelPlacement="stacked" placeholder="Ingrese su contraseña...">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
         </ion-item>
       </ion-list>
     </ion-card-content>
     <div id="contenedor_btn">
-      <ion-button id="i-btn" (click)="registro()">Registrarse</ion-button>
+      <ion-button (click)="registrar()" style="color: white;" >Registrar usuario</ion-button>
     </div>
-    <div id="contenedor_login">
-      <a id="i-link" routerLink="/login">¿Ya tienes cuenta? Inicia sesion</a>
+    <div id="contenedor_a">
+      <a id="a-link" routerLink="/login">¿Ya tienes cuenta? Inicia sesion</a>
     </div>
   </ion-card>
 </ion-content>

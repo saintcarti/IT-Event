@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoadingController } from '@ionic/angular';
 
-
 @Component({
   selector: 'app-register',
   templateUrl: './register.page.html',
@@ -10,17 +9,21 @@ import { LoadingController } from '@ionic/angular';
 })
 export class RegisterPage {
 
-  constructor(private router:Router , private loadingcontroller:LoadingController) { }
+  constructor(private router:Router,private loadingcontroller:LoadingController) { }
 
-  async registro() {
+  async registrar(){
 
     const loading = await this.loadingcontroller.create({
-      mode: 'ios',
-      message: 'Espere por favor...',
-      duration: 1500,
+      message: 'Registrando...',
+      duration: 2000,
+      mode: 'ios'
+
     });
-    this.router.navigate(['/home']);
     await loading.present();
+
+    loading.onDidDismiss().then(() => {
+      this.router.navigate(['/login']);
+    });
 
   }
 

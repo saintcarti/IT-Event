@@ -1,31 +1,36 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>  
-    <ion-title>Bienvenido A IT-Event</ion-title>
+  <ion-toolbar>
+    <ion-title>Bienvenido a IT-Event-Admin</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  
-
-    <ion-card mode="ios" id="i-card">
-      <ion-card-header id="i-header">
-        <ion-card-title>Inicio de sesion</ion-card-title>
-      </ion-card-header>
-      <ion-card-content>
-        <ion-list lines="none" id="i-list">
-          <ion-item>
-            <ion-input name="txtUsuario" [(ngModel)]="txtUsuario" label="Usuario: " labelPlacement="stacked" type="text" placeholder="Ingrese su usuario..."></ion-input>
-          </ion-item>
-          <ion-item>
-            <ion-input name="txtPassword" [(ngModel)]="txtPassword" label="Contraseña: " labelPlacement="stacked" type="password" placeholder="Ingrese su contraseña..."></ion-input>
-          </ion-item>
-        </ion-list>
-      </ion-card-content>
-      <div id="contenedor_btn">
-        <ion-button id="i-btn" (click)="inicio()">Iniciar sesion</ion-button>
-      </div>
-      <div id="contenedor_registro">
-        <a id="i-link" routerLink="/register">¿No tienes cuenta? Registrate</a>
-      </div>
-    </ion-card>
+  <ion-card mode="ios" id="i-card">
+    <ion-card-header mode="ios" id="i-header">
+      <ion-card-title id="i-title">Inicio de sesion</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list lines="none" id="i-list" mode="ios">
+        <ion-item>
+          <ion-input name="txtUsuario" label="Usuario: " type="text" labelPlacement="stacked" placeholder="Ingrese su usuario..."></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-input name="txtPassword" label="Contraseña: " type="password" labelPlacement="stacked" placeholder="Ingrese su contraseña...">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+        <div id="contenedor_a2">
+          <a id="a-link" routerLink="/forgot-password">¿Olvidaste tu contraseña?</a>
+        </div>
+      </ion-list>
+    </ion-card-content>
+    <div id="contenedor_btn">
+      <ion-button id="i-btn" (click)="inicioSesion()">Iniciar sesion</ion-button>
+    </div>
+    <div id="contenedor_a">
+      <a id="a-link" routerLink="/register">¿No tienes cuenta? Registrate</a>
+    </div>
+    
+    
+  </ion-card>
 </ion-content>
