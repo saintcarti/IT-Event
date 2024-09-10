@@ -1,18 +1,20 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Listado de asistentes</ion-title>
-      <ion-buttons slot="end">
-        <ion-button (click)="mostrarMenu()">
-          <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
-        </ion-button>
-      </ion-buttons>
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center; color: white;">Asistentes</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="mostrarMenu()">
+        <ion-icon style="color: white;" slot="end" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">tab4</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content color="dark" [fullscreen]="true">
+    <ion-item color="dark" *ngFor="let asistente of asistentes">
+      <ion-label >
+        <h2 style="color: white;">{{ asistente.nombre }}</h2>
+        <p style="color: white;">{{ asistente.correo }}</p>
+      </ion-label>
+      <ion-button (click)="navegar()" style="color: white;">{{ asistente.urlname }}</ion-button>
+    </ion-item>  
 </ion-content>

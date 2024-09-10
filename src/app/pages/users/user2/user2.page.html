@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/users" mode="ios" text="" color="dark"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title style="text-align: center;">Usuario 2</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      <ion-list lines="none">
+        <ion-item>
+          <ion-label position="floating">Nombre</ion-label>
+          <br>
+          <ion-input type="text" value="Marquitos navaja"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Correo</ion-label>
+          <br>
+          <ion-input type="email" value="Marquitos123@gmail.com"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Usuario</ion-label>
+          <br>
+          <ion-input type="text" value="marquitos123"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ion-button style="display: flex; align-items: center;">Actualizar informacion</ion-button>
+    </ion-card-content>      
+  </ion-card>
+</ion-content>

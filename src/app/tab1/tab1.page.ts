@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MenuController } from '@ionic/angular';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -9,9 +9,16 @@ import { MenuController } from '@ionic/angular';
 })
 export class Tab1Page {
 
-  constructor(private menucontroller:MenuController) {}
+  constructor(private menucontroller:MenuController , private router:Router) {}
 
   mostrarMenu(){
     this.menucontroller.open('first');
   }
+
+
+  eventoSeleccionado(){
+    this.router.navigate(['/events/event-selected']);
+  }
+
+
 }

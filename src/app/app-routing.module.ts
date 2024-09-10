@@ -36,16 +36,24 @@ const routes: Routes = [
     loadChildren: () => import('./pages/config/config.module').then( m => m.ConfigPageModule)
   },
   {
-    path: 'tab4',
-    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
-  },
-  {
     path: 'forgot-password',
     loadChildren: () => import('./pages/forgot-password/forgot-password.module').then( m => m.ForgotPasswordPageModule)
   },
   {
     path: 'scan-qr',
     loadChildren: () => import('./pages/scan-qr/scan-qr.module').then( m => m.ScanQrPageModule)
+  },
+  {
+    path: 'create-event',
+    loadChildren: () => import('./pages/CRUD/create-event/create-event.module').then( m => m.CreateEventPageModule)
+  },
+  {
+    path: 'modify-event',
+    loadChildren: () => import('./pages/CRUD/modify-event/modify-event.module').then( m => m.ModifyEventPageModule)
+  },
+  {
+    path: 'delete-event',
+    loadChildren: () => import('./pages/CRUD/delete-event/delete-event.module').then( m => m.DeleteEventPageModule)
   }
 ];
 @NgModule({

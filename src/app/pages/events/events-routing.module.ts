@@ -7,7 +7,15 @@ const routes: Routes = [
   {
     path: '',
     component: EventsPage
+  },  {
+    path: 'event-selected',
+    loadChildren: () => import('./event-selected/event-selected.module').then( m => m.EventSelectedPageModule)
+  },
+  {
+    path: 'detail-event',
+    loadChildren: () => import('./detail-event/detail-event.module').then( m => m.DetailEventPageModule)
   }
+
 ];
 
 @NgModule({

@@ -1,155 +1,57 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Eventos disponibles</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center; color: white;">Eventos disponibles</ion-title>
       <ion-buttons slot="end">
         <ion-button (click)="mostrarMenu()">
-          <ion-icon slot="end" name="menu-outline" color="dark"></ion-icon>
+          <ion-icon slot="end" color="light" name="menu-outline"></ion-icon>
         </ion-button>
       </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content color="dark" [fullscreen]="true">
   <ion-grid id="grid">
     <ion-row id="row">
       <ion-col>
-        <ion-card mode="ios" >
+        <ion-card color="dark" style="border: solid 2px grey;" mode="ios" >
           <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">1er congreso de investigación</ion-card-title>
+            <ion-card-title style="font-size: 14px; text-align: center; color: white;">1er congreso de investigación</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <img src="/../assets/img/convocatoria1.jpg" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
+            <p style="color: white; text-align: center; margin-top: 10px;">Descripción del evento</p>
+            <ion-button (click)="eventoSeleccionado()" expand="block" fill="outline" color="success">Ver más</ion-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
+    </ion-row>
+    <ion-row id="row">
       <ion-col>
-        <ion-card mode="ios" >
+        <ion-card color="dark" style="border: solid 2px grey;" mode="ios" >
           <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Más que una charla</ion-card-title>
+            <ion-card-title style="font-size: 14px; text-align: center; color: white;">Más que una charla</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <img src="/../assets/img/convocatoria2.jpg" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
+            <p style="color: white; text-align: center; margin-top: 10px;">Descripción del evento</p>
+            <ion-button (click)="eventoSeleccionado()" expand="block" fill="outline" color="success">Ver más</ion-button>
           </ion-card-content>
         </ion-card>
-
       </ion-col>
-
     </ion-row>
     <ion-row id="row">
       <ion-col>
-        <ion-card mode="ios" >
+        <ion-card color="dark" style="border: solid 2px grey;" mode="ios" >
           <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">PRINT DAY</ion-card-title>
+            <ion-card-title style="font-size: 14px; text-align: center; color: white;">PRINT DAY</ion-card-title>
           </ion-card-header>
           <ion-card-content>
             <img src="/../assets/img/convocatoria3.jpg" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
+            <p style="color: white; text-align: center; margin-top: 10px;">Descripción del evento</p>
+            <ion-button (click)="eventoSeleccionado()" expand="block" fill="outline" color="success">Ver más</ion-button>
           </ion-card-content>
         </ion-card>
       </ion-col>
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Pineapple 2024</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria4.png" style="max-height: 100px; height: 100%; " >
-            <p>Región de La Araucania</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-        
-      </ion-col>
-
-    </ion-row>
-    <ion-row id="row">
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Pineapple 2024</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria5.jpg" style="max-height: 100px; height: 100%; " >
-            <p>Región de Los Lagos</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Participación Circulab en Congreso</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria6.png" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-        
-      </ion-col>
-
-    </ion-row>
-    <ion-row id="row">
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">ChefTalks</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria7.png" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Charla SVA</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria8.png" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-        
-      </ion-col>
-
-    </ion-row>
-    <ion-row id="row">
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Celebración del Mes de la Comida Chilena</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria9.jpeg" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-      </ion-col>
-      <ion-col>
-        <ion-card mode="ios" >
-          <ion-card-header>
-            <ion-card-title style="font-size: 14px; text-align: center;">Encuentro de Mujeres en Tecnología e Innovación</ion-card-title>
-          </ion-card-header>
-          <ion-card-content>
-            <img src="/../assets/img/convocatoria10.jpg" style="max-height: 100px; height: 100%; " >
-            <p>Descripción del evento</p>
-            <ion-button expand="block" fill="outline" color="primary">Ver más</ion-button>
-          </ion-card-content>
-        </ion-card>
-        
-      </ion-col>
-
     </ion-row>
   </ion-grid>
 

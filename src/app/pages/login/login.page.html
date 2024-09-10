@@ -1,27 +1,28 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Bienvenido a IT-Event-Admin</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center; color: white;">Bienvenido a IT-Event-Admin</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card mode="ios" id="i-card">
+<ion-content mode="ios" color="dark" [fullscreen]="true">
+  <ion-card color="dark" style="border: solid 2px grey;" mode="ios" id="i-card">
     <ion-card-header mode="ios" id="i-header">
       <ion-card-title id="i-title">Inicio de sesion</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content >
       <ion-list lines="none" id="i-list" mode="ios">
-        <ion-item>
-          <ion-input name="txtUsuario" label="Usuario: " type="text" labelPlacement="stacked" placeholder="Ingrese su usuario..."></ion-input>
+        <ion-item color="dark">
+          <ion-input style="color: white;"  name="txtUsuario" label="Usuario: " type="text" labelPlacement="stacked" placeholder="Ingrese su usuario..."></ion-input>
         </ion-item>
-        <ion-item>
-          <ion-input name="txtPassword" label="Contraseña: " type="password" labelPlacement="stacked" placeholder="Ingrese su contraseña...">
+        <ion-item  color="dark">
+          <ion-input style="color: white;" name="txtPassword" label="Contraseña: " type="password" labelPlacement="stacked" placeholder="Ingrese su contraseña...">
             <ion-input-password-toggle slot="end"></ion-input-password-toggle>
           </ion-input>
         </ion-item>
-        <div id="contenedor_a2">
+        <ion-item color="dark">
           <a id="a-link" routerLink="/forgot-password">¿Olvidaste tu contraseña?</a>
-        </div>
+        </ion-item>
+        
       </ion-list>
     </ion-card-content>
     <div id="contenedor_btn">
@@ -34,3 +35,22 @@
     
   </ion-card>
 </ion-content>
+<ion-footer>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center; margin-top: 10px; color: white;">IT-Event-Admin</ion-title>
+    <div style="text-align: center; margin-top: 10px;">
+      <ion-button color="light" fill="clear" href="https://www.facebook.com/tu_pagina" target="_blank">
+        <ion-icon slot="icon-only" name="logo-facebook"></ion-icon>
+      </ion-button>
+      <ion-button color="light" fill="clear" href="https://www.twitter.com/tu_pagina" target="_blank">
+        <ion-icon slot="icon-only" name="logo-twitter"></ion-icon>
+      </ion-button>
+      <ion-button color="light" fill="clear" href="https://www.instagram.com/tu_pagina" target="_blank">
+        <ion-icon slot="icon-only" name="logo-instagram"></ion-icon>
+      </ion-button>
+      <ion-button color="light" fill="clear" href="https://www.linkedin.com/tu_pagina" target="_blank">
+        <ion-icon slot="icon-only" name="logo-linkedin"></ion-icon>
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,19 +1,19 @@
 <ion-app>
   <ion-menu contentId="main" menuId="first" side="end" type="overlay" mode="ios">
     <ion-header mode="ios">
-      <ion-toolbar mode="ios">
-        <ion-icon slot="end" name="person-outline" size="large" color="dark" style="padding-right: 35;"></ion-icon>
-        <ion-title>Opciones</ion-title>
+      <ion-toolbar color="primary" mode="ios">
+        <ion-icon slot="end" name="person-outline" size="large" style="padding-right: 35; color: white;"></ion-icon>
+        <ion-title color="light">Opciones</ion-title>
       </ion-toolbar>
     </ion-header>
 
 
-    <ion-content>
+    <ion-content color="dark">
       <ion-list lines="none"> 
         <ion-menu-toggle *ngFor="let menu of options">
-          <ion-item [routerLink]="menu.redirectTo" detail="true">
-            <ion-icon slot="end" [name]="menu.icon" color="dark"></ion-icon>
-            <ion-label>{{menu.name}}</ion-label>
+          <ion-item color="dark" [routerLink]="menu.redirectTo" detail="true">
+            <ion-icon slot="end" [name]="menu.icon" color="light"></ion-icon>
+            <ion-label style="color: white;">{{menu.name}}</ion-label>
           </ion-item>
         </ion-menu-toggle>
       </ion-list>

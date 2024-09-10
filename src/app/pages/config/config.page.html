@@ -1,16 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>Configuracion de aplicacion</ion-title>
+    <ion-title style="text-align: center;">Configuracion de aplicacion</ion-title>
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/" mode="ios" text="" color="dark"></ion-back-button>
+      <ion-back-button defaultHref="/tabs/tab1" mode="ios" text="" color="dark"></ion-back-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">config</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  
+  <ion-list>
+    <ion-item>
+      <ion-label>Modo oscuro</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Notificaciones</ion-label>
+      <ion-toggle slot="end"></ion-toggle>
+    </ion-item>
+    <ion-item>
+      <ion-label>Idioma</ion-label>
+      <ion-select slot="end" interface="popover">
+        <ion-select-option value="es">Español</ion-select-option>
+        <ion-select-option value="en">Ingles</ion-select-option>
+      </ion-select>
+    </ion-item>
+    
+  </ion-list>
 </ion-content>
